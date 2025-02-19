@@ -46,7 +46,7 @@
             <baseCost>1000</baseCost>
             <techLevel>Industrial</techLevel>
             <prerequisites>
-            <li>Electricity</li>
+                <li>Electricity</li>
             </prerequisites>
             <researchViewX>12.00</researchViewX>
             <researchViewY>0.00</researchViewY>

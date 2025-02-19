@@ -13,7 +13,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="LongRangeMineralScanner"]/constructionSkillPrerequisite</xpath>
         <value>
-            <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+            <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
         </value>
     </Operation>
 
@@ -30,7 +30,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="GroundPenetratingScanner"]/constructionSkillPrerequisite</xpath>
         <value>
-            <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+            <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
         </value>
     </Operation>
 
