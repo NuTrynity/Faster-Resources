@@ -36,7 +36,7 @@
         <value>
             <li Class="CompProperties_LongRangeMineralScanner">
                 <scanSpeedStat>ResearchSpeed</scanSpeedStat>
-                <scanFindMtbDays>1</scanFindMtbDays>
+                <scanFindMtbDays>1.33</scanFindMtbDays>
                 <scanFindGuaranteedDays>1</scanFindGuaranteedDays>
                 <soundWorking>ScannerLongRangeMineral_Ambience</soundWorking>
             </li>
