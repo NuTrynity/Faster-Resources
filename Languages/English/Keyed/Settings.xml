@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <!-- Mod Setting Title -->
+    <ModTitle>[NuT's] Faster Resources</ModTitle>
+    <ChangeAlert>ANY CHANGE REQUIRES GAME RESTART</ChangeAlert>
+
+    <!-- Mod Setting Texts -->
+    <StatDeepDrillSpeed>Deep Drill Speed</StatDeepDrillSpeed>
+    <StatMiningYield>Mining Yield</StatMiningYield>
+    <StatDefault>Vanilla:</StatDefault>
+</LanguageData>
