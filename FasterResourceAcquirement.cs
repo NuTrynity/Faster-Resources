@@ -1,7 +1,8 @@
 ﻿using Verse;
 using HarmonyLib;
-using System.Reflection;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
@@ -42,16 +43,14 @@ namespace FasterResource
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(inRect);
 
-            listing.Label("GAME REQUIRES A GAME RESTART TO APPLY CHANGES");
-
             // === Mining Yield ===
             settings.miningYieldMultiplier = listing.SliderLabeled(
-                "Mining Yield: " + settings.miningYieldMultiplier.ToString("P0"), // P0 formats as percentage with 0 decimal places
+                "Mining Yield: " + settings.miningYieldMultiplier.ToString("P0"),
                 settings.miningYieldMultiplier,
-                0.5f,  // Min value (50%)
-                3.0f   // Max value (300%)
+                0.5f,
+                3.0f
             );
-            listing.Gap(12f); // Add a small gap after each slider
+            listing.Gap(12f);
 
             // === Mining Speed ===
             settings.miningSpeedMultiplier = listing.SliderLabeled(
@@ -80,6 +79,8 @@ namespace FasterResource
             );
             listing.Gap(12f);
 
+            ApplyChanges();
+
             listing.End();
             base.DoSettingsWindowContents(inRect);
         }
@@ -91,29 +92,27 @@ namespace FasterResource
 
         private void ApplyChanges()
         {
-            // Get references to the StatDefs you want to modify
-            // StatDefOf provides direct references to many common stats.
             if (StatDefOf.MiningYield != null)
             {
-                StatDefOf.MiningYield.defaultBaseValue = 1.0f * settings.miningYieldMultiplier;
+                StatDefOf.MiningYield.defaultBaseValue = settings.miningYieldMultiplier;
                 Log.Message($"[FRA] MiningYield set to: {StatDefOf.MiningYield.defaultBaseValue}");
             }
 
             if (StatDefOf.MiningSpeed != null)
             {
-                StatDefOf.MiningSpeed.defaultBaseValue = 1.0f * settings.miningSpeedMultiplier;
+                StatDefOf.MiningSpeed.defaultBaseValue = settings.miningSpeedMultiplier;
                 Log.Message($"[FRA] MiningSpeed set to: {StatDefOf.MiningSpeed.defaultBaseValue}");
             }
 
             if (StatDefOf.PlantHarvestYield != null)
             {
-                StatDefOf.PlantHarvestYield.defaultBaseValue = 1.0f * settings.plantHarvestYieldMultiplier;
+                StatDefOf.PlantHarvestYield.defaultBaseValue = settings.plantHarvestYieldMultiplier;
                 Log.Message($"[FRA] PlantHarvestYield set to: {StatDefOf.PlantHarvestYield.defaultBaseValue}");
             }
 
             if (StatDefOf.PlantWorkSpeed != null)
             {
-                StatDefOf.PlantWorkSpeed.defaultBaseValue = 1.0f * settings.plantWorkSpeedMultiplier;
+                StatDefOf.PlantWorkSpeed.defaultBaseValue = settings.plantWorkSpeedMultiplier;
                 Log.Message($"[FRA] PlantWorkSpeed set to: {StatDefOf.PlantWorkSpeed.defaultBaseValue}");
             }
         }
