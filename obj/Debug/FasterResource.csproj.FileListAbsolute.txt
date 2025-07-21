@@ -1,0 +1,10 @@
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/Faster-Resource/Assemblies/FasterResource.dll
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/Faster-Resource/Assemblies/FasterResource.pdb
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.csproj.AssemblyReference.cache
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.GeneratedMSBuildEditorConfig.editorconfig
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.AssemblyInfoInputs.cache
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.AssemblyInfo.cs
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.csproj.CoreCompileInputs.cache
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.sourcelink.json
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.dll
+/home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.pdb

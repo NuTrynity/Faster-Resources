@@ -3,21 +3,27 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]/prerequisites</xpath>
         <value>
-            <li>Electricity</li>
+            <prerequisites>
+                <li>Electricity</li>
+            </prerequisites>
         </value>
     </Operation>
 
-    <Operation Class="PatchOperationRemove">
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/prerequisites</xpath>
         <value>
-            <li>Electricity</li>
+            <prerequisites>
+                <li>Electricity</li>
+            </prerequisites>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/prerequisites</xpath>
         <value>
-            <li>Electricity</li>
+            <prerequisites>
+                <li>Electricity</li>
+            </prerequisites>
         </value>
     </Operation>
 </Patch>

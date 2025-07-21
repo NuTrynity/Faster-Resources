@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ejh5fefZErjhS8AyaCCacp2fnRIshPDddH/ZjmWfamF1LcovGqFo2W4iLvDLCk6gcWoP66TYJfI8Xwg5n1SAZg==",
+  "success": true,
+  "projectFilePath": "/home/nutrynity/Documents/Mods/Rimworld/FasterResource/FasterResource.csproj",
+  "expectedPackageFiles": [
+    "/home/nutrynity/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/home/nutrynity/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.3/microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
