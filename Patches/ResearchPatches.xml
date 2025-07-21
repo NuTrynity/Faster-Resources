@@ -1,56 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]</xpath>
+        <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]/prerequisites</xpath>
         <value>
-            <ResearchProjectDef>
-            <defName>GroundPenetratingScanner</defName>
-            <label>ground-penetrating scanner</label>
-            <description>Build ground-penetrating scanners that can detect drillable resources under the surface. Requires an advanced component to construct.</description>
-            <baseCost>1000</baseCost>
-            <techLevel>Industrial</techLevel>
-            <prerequisites>
-                <li>Electricity</li>
-            </prerequisites>
-            <researchViewX>13.00</researchViewX>
-            <researchViewY>2.20</researchViewY>
-            </ResearchProjectDef>
+            <li>Electricity</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/prerequisites</xpath>
+        <value>
+            <li>Electricity</li>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]</xpath>
+        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/prerequisites</xpath>
         <value>
-            <ResearchProjectDef>
-            <defName>DeepDrilling</defName>
-            <label>deep drilling</label>
-            <description>Build deep drills for extracting resources from underground. You'll need a ground-penetrating scanner to find the resources.</description>
-            <baseCost>400</baseCost>
-            <techLevel>Industrial</techLevel>
-            <prerequisites>
-                <li>Electricity</li>
-            </prerequisites>
-            <researchViewX>12.00</researchViewX>
-            <researchViewY>2.20</researchViewY>
-            </ResearchProjectDef>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]</xpath>
-            <value>
-            <ResearchProjectDef>
-            <defName>LongRangeMineralScanner</defName>
-            <label>long-range mineral scanner</label>
-            <description>Construct long-range mineral scanners your researchers can use to detect precious minerals across the planet. Can be tuned to find a specific mineral. Requires advanced components to construct.</description>
-            <baseCost>1000</baseCost>
-            <techLevel>Industrial</techLevel>
-            <prerequisites>
-                <li>Electricity</li>
-            </prerequisites>
-            <researchViewX>12.00</researchViewX>
-            <researchViewY>0.00</researchViewY>
-            </ResearchProjectDef>
+            <li>Electricity</li>
         </value>
     </Operation>
 </Patch>

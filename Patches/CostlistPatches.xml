@@ -4,8 +4,8 @@
         <xpath>/Defs/ThingDef[defName="LongRangeMineralScanner"]/costList</xpath>
         <value>
             <costList>
-            <Steel>200</Steel>
-            <ComponentIndustrial>6</ComponentIndustrial>
+                <Steel>200</Steel>
+                <ComponentIndustrial>6</ComponentIndustrial>
             </costList>
         </value>
     </Operation>
@@ -21,8 +21,8 @@
         <xpath>/Defs/ThingDef[defName="GroundPenetratingScanner"]/costList</xpath>
         <value>
             <costList>
-            <Steel>150</Steel>
-            <ComponentIndustrial>4</ComponentIndustrial>
+                <Steel>150</Steel>
+                <ComponentIndustrial>4</ComponentIndustrial>
             </costList>
         </value>
     </Operation>
