@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+    <!-- Deep Drill -->
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/StatDef[defName="DeepDrillingSpeed"]/defaultBaseValue</xpath>
         <value>
@@ -7,39 +8,37 @@
         </value>
     </Operation>
 
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName="DeepDrill"]/comps/li[@Class="CompProperties_Power"]</xpath>
+    </Operation>
+
+    <!-- Ground Penetrating Scanner -->
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="DeepDrill"]/comps</xpath>
+        <xpath>Defs/ThingDef[defName="GroundPenetratingScanner"]/comps/li[@Class="CompProperties_ScannerMineralsDeep"]/scanFindMtbDays</xpath>
         <value>
-            <comps>
-            <li Class="CompProperties_Forbiddable"/>
-            <li Class="CompProperties_Flickable"/>
-            <li Class="CompProperties_DeepDrill" />
-            <li Class="CompProperties_CreatesInfestations" />
-            </comps>
+            <scanFindMtbDays>5</scanFindMtbDays>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="GroundPenetratingScanner"]/comps/li[@Class="CompProperties_ScannerMineralsDeep"]</xpath>
+        <xpath>Defs/ThingDef[defName="GroundPenetratingScanner"]/comps/li[@Class="CompProperties_ScannerMineralsDeep"]/scanFindGuaranteedDays</xpath>
         <value>
-            <li Class="CompProperties_ScannerMineralsDeep">
-                <scanSpeedStat>ResearchSpeed</scanSpeedStat>
-                <scanFindMtbDays>1.33</scanFindMtbDays>
-                <scanFindGuaranteedDays>3</scanFindGuaranteedDays>
-                <soundWorking>ScannerGroundPenetrating_Ambience</soundWorking>
-            </li>
+            <scanFindGuaranteedDays>5</scanFindGuaranteedDays>
+        </value>
+    </Operation>
+
+    <!-- Long Range Mineral Scanner -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="LongRangeMineralScanner"]/comps/li[@Class="CompProperties_LongRangeMineralScanner"]/scanFindMtbDays</xpath>
+        <value>
+            <scanFindMtbDays>3</scanFindMtbDays>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="LongRangeMineralScanner"]/comps/li[@Class="CompProperties_LongRangeMineralScanner"]</xpath>
+        <xpath>Defs/ThingDef[defName="LongRangeMineralScanner"]/comps/li[@Class="CompProperties_LongRangeMineralScanner"]/scanFindGuaranteedDays</xpath>
         <value>
-            <li Class="CompProperties_LongRangeMineralScanner">
-                <scanSpeedStat>ResearchSpeed</scanSpeedStat>
-                <scanFindMtbDays>1.33</scanFindMtbDays>
-                <scanFindGuaranteedDays>1</scanFindGuaranteedDays>
-                <soundWorking>ScannerLongRangeMineral_Ambience</soundWorking>
-            </li>
+            <scanFindGuaranteedDays>3</scanFindGuaranteedDays>
         </value>
     </Operation>
 </Patch>

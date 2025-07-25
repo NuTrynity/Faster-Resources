@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+    <!-- Deep Drill -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/prerequisites</xpath>
+    </Operation>
+
+        <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/baseCost</xpath>
+        <value>
+            <baseCost>500</baseCost>
+        </value>
+    </Operation>
+
+    <!-- Ground Penetrating Scanner -->
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]/prerequisites</xpath>
         <value>
@@ -9,8 +22,16 @@
         </value>
     </Operation>
 
+        <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]/baseCost</xpath>
+        <value>
+            <baseCost>750</baseCost>
+        </value>
+    </Operation>
+
+    <!-- Long Range Mineral Scanner -->
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/prerequisites</xpath>
+        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/prerequisites</xpath>
         <value>
             <prerequisites>
                 <li>Electricity</li>
@@ -19,11 +40,22 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/prerequisites</xpath>
+        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/baseCost</xpath>
         <value>
-            <prerequisites>
-                <li>Electricity</li>
-            </prerequisites>
+            <baseCost>750</baseCost>
         </value>
+    </Operation>
+
+    <!-- Removes Advanced Research Table Requirement -->
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/requiredResearchBuilding</xpath>
+    </Operation>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/requiredResearchBuilding</xpath>
+    </Operation>
+
+    <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]/requiredResearchBuilding</xpath>
     </Operation>
 </Patch>

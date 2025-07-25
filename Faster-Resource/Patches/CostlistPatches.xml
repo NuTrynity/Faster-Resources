@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+    <!-- Deep Drill -->
+   <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DeepDrill"]/constructionSkillPrerequisite</xpath>
+        <value>
+            <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+        </value>
+    </Operation>
+
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="LongRangeMineralScanner"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName="DeepDrill"]/costList</xpath>
+        <value>
+            <costList>
+                <Steel>100</Steel>
+            </costList>
+        </value>
+    </Operation>
+
+    <!-- Long Range Scanner -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="LongRangeMineralScanner"]/costList</xpath>
         <value>
             <costList>
                 <Steel>200</Steel>
@@ -13,12 +31,13 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="LongRangeMineralScanner"]/constructionSkillPrerequisite</xpath>
         <value>
-            <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+            <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
         </value>
     </Operation>
 
+    <!-- Ground Penetrating Scanner -->
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="GroundPenetratingScanner"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName="GroundPenetratingScanner"]/costList</xpath>
         <value>
             <costList>
                 <Steel>150</Steel>
@@ -28,16 +47,9 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="GroundPenetratingScanner"]/constructionSkillPrerequisite</xpath>
+        <xpath>Defs/ThingDef[defName="GroundPenetratingScanner"]/constructionSkillPrerequisite</xpath>
         <value>
-            <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
-        </value>
-    </Operation>
-
-   <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="DeepDrill"]/constructionSkillPrerequisite</xpath>
-        <value>
-            <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+            <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
         </value>
     </Operation>
 </Patch>

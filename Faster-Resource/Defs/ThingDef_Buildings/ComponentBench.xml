@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>ComponentBench</defName> <label>Component Bench</label>
+        <description>
+            An early-industrial device specializing in the accelerated production of industrial components.
+        </description>
+        <thingClass>Building_WorkTable</thingClass> 
+        <graphicData>
+            <texPath>Buildings/Special/ComponentBench/ComponentBench</texPath> <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <shadowData>
+                <volume>(0.8, 0.5, 0.8)</volume>
+                <offset>(0,0,-0.1)</offset>
+            </shadowData>
+            <damageData>
+                <rectN>(0.1,0.1,0.8,0.8)</rectN>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <fillPercent>1</fillPercent>
+        <pathCost>70</pathCost>
+        <blockWind>false</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <rotatable>false</rotatable>
+        <designationCategory>Production</designationCategory>
+        
+        <researchPrerequisite>Smithing</researchPrerequisite> 
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <costList>
+            <Steel>300</Steel>
+        </costList>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>2500</WorkToBuild>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowColor>(150,200,255,0)</glowColor>
+                <glowRadius>5</glowRadius>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_UsableFromWorkTable">
+                <usableSkill>Crafting</usableSkill>
+            </li>
+        </comps>
+        
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+
+        <size>(1,1)</size> 
+        <tradeability>None</tradeability>
+        <techLevel>Industrial</techLevel>
+    </ThingDef>
+</Defs>
