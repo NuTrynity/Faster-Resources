@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>ComponentBench</defName>
+    <label>Component Table</label>
+    <description>An early-industrial bench for production of industrial components.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    
+    <graphicData>
+      <texPath>componentbench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3, 1.2)</drawSize> <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+
+    <costList>
+      <Steel>300</Steel>
+    </costList>
+    <recipes>
+      <li>Make_ComponentIndustrial</li>
+    </recipes>
+    <researchPrerequisites>
+      <li>Smithing</li>
+    </researchPrerequisites>
+
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+
+    <size>(3, 1)</size> <designationCategory>Production</designationCategory>
+    <uiOrder>2520</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <interactionCellOffset>(0, 0, -1)</interactionCellOffset>
+    <hasInteractionCell>True</hasInteractionCell>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(73,123,138,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+
+    <constructEffect>ConstructMetal</constructEffect>
+
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+
+    <rotatable>true</rotatable> 
+  </ThingDef>
+</Defs>

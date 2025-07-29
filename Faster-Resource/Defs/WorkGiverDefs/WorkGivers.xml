@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <WorkGiverDef>
+        <defName>DoBillsComponentBench</defName>
+        <label>make components at component crafter</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>70</priorityInType>
+        <fixedBillGiverDefs>
+            <li>ComponentBench</li>
+        </fixedBillGiverDefs>
+        <verb>work at</verb>
+        <gerund>working at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+</Defs>

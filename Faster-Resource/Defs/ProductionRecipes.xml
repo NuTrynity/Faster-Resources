@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>Make_BulkComponents</defName>
+    <label>Create 4x components</label>
+    <description>Produce component</description>
+    <jobString>Making component.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>12000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <researchPrerequisite>
+      <li>Fabrication</li>
+    </researchPrerequisite>
+
+    <recipeUsers>
+        <li>FabricationBench</li>
+    </recipeUsers>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>48</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </products>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+    <RecipeDef>
+      <defName>CrushChunks</defName>
+      <label>Crush Chunks to Steel</label>
+      <description>Siphon steel through crushing rock chunks</description>
+
+      <ingredients>
+        <li>
+          <filter>
+            <categories>
+              <li>StoneChunks</li>
+            </categories>
+          </filter>
+          <count>1</count>
+        </li>
+      </ingredients>
+
+      <jobString>Chisel chunks</jobString>
+      <workAmount>5000</workAmount>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>CutStone</effectWorking>
+      <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+      
+      <recipeUsers>
+          <li>TableStonecutter</li>
+      </recipeUsers>
+
+      <fixedIngredientFilter>
+        <categories>
+          <li>StoneChunks</li>
+        </categories>
+      </fixedIngredientFilter>
+      <products>
+        <Steel>30</Steel>
+      </products>
+      <workSkill>Crafting</workSkill>
+    </RecipeDef>
+</Defs>

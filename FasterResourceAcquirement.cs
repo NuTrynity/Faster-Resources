@@ -1,9 +1,5 @@
 ﻿using Verse;
 using HarmonyLib;
-using System.Linq;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 
@@ -15,6 +11,7 @@ namespace FasterResource
         public float miningSpeedMultiplier = 1.25f;
         public float plantHarvestYieldMultiplier = 1.25f;
         public float plantWorkSpeedMultiplier = 1.25f;
+        public float drillingSpeedMultiplier = 2.0f;
 
         public override void ExposeData()
         {
@@ -22,6 +19,7 @@ namespace FasterResource
             Scribe_Values.Look(ref miningSpeedMultiplier, "miningSpeedMultiplier", 1.25f);
             Scribe_Values.Look(ref plantHarvestYieldMultiplier, "plantHarvestYieldMultiplier", 1.25f);
             Scribe_Values.Look(ref plantWorkSpeedMultiplier, "plantWorkSpeedMultiplier", 1.25f);
+            Scribe_Values.Look(ref drillingSpeedMultiplier, "drillingSpeedMultiplier", 1.25f);
 
             base.ExposeData();
         }
@@ -42,6 +40,16 @@ namespace FasterResource
         {
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(inRect);
+
+            /* 
+            WHAT THESE PARAMETERS MEAN:
+            settings.value = listing.SliderLabeled(
+                "Text Shown" + settings.variable, <- Text and slider
+                settings.variable, <- Setter
+                slider minimum,
+                slider maximum
+            ) 
+            */
 
             // === Mining Yield ===
             settings.miningYieldMultiplier = listing.SliderLabeled(
@@ -79,6 +87,14 @@ namespace FasterResource
             );
             listing.Gap(12f);
 
+            // === Deep Drilling Speed ===
+            settings.drillingSpeedMultiplier = listing.SliderLabeled(
+                "Deep Drilling Speed: " + settings.drillingSpeedMultiplier.ToString("P0"),
+                settings.drillingSpeedMultiplier,
+                0.5f,
+                3.0f
+            );
+
             ApplyChanges();
 
             listing.End();
@@ -114,6 +130,12 @@ namespace FasterResource
             {
                 StatDefOf.PlantWorkSpeed.defaultBaseValue = settings.plantWorkSpeedMultiplier;
                 Log.Message($"[FRA] PlantWorkSpeed set to: {StatDefOf.PlantWorkSpeed.defaultBaseValue}");
+            }
+
+            if (StatDefOf.DeepDrillingSpeed != null)
+            {
+                StatDefOf.DeepDrillingSpeed.defaultBaseValue = settings.drillingSpeedMultiplier;
+                Log.Message($"[FRA] DeepDrillingSpeed set to: {StatDefOf.DeepDrillingSpeed.defaultBaseValue}");
             }
         }
     }

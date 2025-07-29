@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+<!-- Vanilla Component Recipe -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="Make_ComponentIndustrial"]/workAmount</xpath>
+        <value>
+            <workAmount>3000</workAmount>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="Make_ComponentIndustrial"]/skillRequirements/Crafting</xpath>
+        <value>
+            <Crafting>4</Crafting>
+        </value>
+    </Operation>
+
     <!-- Deep Drill -->
    <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="DeepDrill"]/constructionSkillPrerequisite</xpath>
