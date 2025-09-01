@@ -56,7 +56,7 @@ namespace FasterResource
                 "Mining Yield: " + settings.miningYieldMultiplier.ToString("P0"),
                 settings.miningYieldMultiplier,
                 0.5f,
-                3.0f
+                5.0f
             );
             listing.Gap(12f);
 
@@ -65,7 +65,7 @@ namespace FasterResource
                 "Mining Speed: " + settings.miningSpeedMultiplier.ToString("P0"),
                 settings.miningSpeedMultiplier,
                 0.5f,
-                3.0f
+                5.0f
             );
             listing.Gap(12f);
 
@@ -74,7 +74,7 @@ namespace FasterResource
                 "Plant Harvest Yield: " + settings.plantHarvestYieldMultiplier.ToString("P0"),
                 settings.plantHarvestYieldMultiplier,
                 0.5f,
-                3.0f
+                5.0f
             );
             listing.Gap(12f);
 
@@ -83,7 +83,7 @@ namespace FasterResource
                 "Plant Work Speed: " + settings.plantWorkSpeedMultiplier.ToString("P0"),
                 settings.plantWorkSpeedMultiplier,
                 0.5f,
-                3.0f
+                5.0f
             );
             listing.Gap(12f);
 
@@ -92,7 +92,7 @@ namespace FasterResource
                 "Deep Drilling Speed: " + settings.drillingSpeedMultiplier.ToString("P0"),
                 settings.drillingSpeedMultiplier,
                 0.5f,
-                3.0f
+                5.0f
             );
 
             ApplyChanges();
@@ -103,7 +103,7 @@ namespace FasterResource
 
         public override string SettingsCategory()
         {
-            return "Faster Resource Acquirement";
+            return "[NuT] Faster Resource Acquirement";
         }
 
         private void ApplyChanges()

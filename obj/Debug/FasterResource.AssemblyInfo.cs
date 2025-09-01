@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FasterResource")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd835cf8c84a0fedac4d2ef2efe43013c3b497c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a888a7ea9fad3f2c20059ac5e42797dd622a690")]
 [assembly: System.Reflection.AssemblyProductAttribute("FasterResource")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FasterResource")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
