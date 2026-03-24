@@ -1,5 +1,8 @@
 is_global = true
 build_property.RootNamespace = FasterResource
-build_property.ProjectDir = /home/nutrynity/Documents/Mods/Rimworld/FasterResource/
+build_property.ProjectDir = /home/nutrynity/Documents/GitHub/Faster-Resources/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

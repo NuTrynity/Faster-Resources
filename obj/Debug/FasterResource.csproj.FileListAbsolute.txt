@@ -8,3 +8,13 @@
 /home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.sourcelink.json
 /home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.dll
 /home/nutrynity/Documents/Mods/Rimworld/FasterResource/obj/Debug/FasterResource.pdb
+/home/nutrynity/Documents/GitHub/Faster-Resources/Faster-Resource/Assemblies/FasterResource.dll
+/home/nutrynity/Documents/GitHub/Faster-Resources/Faster-Resource/Assemblies/FasterResource.pdb
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.csproj.AssemblyReference.cache
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.GeneratedMSBuildEditorConfig.editorconfig
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.AssemblyInfoInputs.cache
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.AssemblyInfo.cs
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.csproj.CoreCompileInputs.cache
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.sourcelink.json
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.dll
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Debug/FasterResource.pdb
