@@ -32,28 +32,29 @@ namespace FasterResource
         public FasterResourceMod(ModContentPack content) : base(content)
         {
             mod_settings = GetSettings<FasterResourceSettings>();
-            
             LongEventHandler.QueueLongEvent(InjectStatParts, "Initializing_FRA_Stats", false, null);
         }
 
         private void InjectStatParts()
         {
-            // Define the exact internal StatDefs we want to target
+            // Fetch PlantWorkSpeed dynamically from the database to bypass missing StatDefOf shortcuts
+            StatDef plantWorkSpeedDef = StatDef.Named("PlantWorkSpeed");
+
             var targetStats = new List<StatDef>
             {
                 StatDefOf.MiningYield,
                 StatDefOf.MiningSpeed,
                 StatDefOf.PlantHarvestYield,
-                StatDefOf.PlantWorkSpeed,
+                plantWorkSpeedDef,
                 StatDefOf.DeepDrillingSpeed
             };
 
-            // Create an instance of our custom modifier
             FasterResourceStats customPart = new FasterResourceStats();
 
-            // Inject it seamlessly into each targeted stat track
             foreach (StatDef stat in targetStats)
             {
+                if (stat == null) continue;
+                
                 if (stat.parts == null) stat.parts = new List<StatPart>();
                 stat.parts.Add(customPart);
             }
@@ -88,31 +89,22 @@ namespace FasterResource
         #endregion
     }
 
-    #region The Dynamic Stat Modifier
+    #region The Global Stat Modifier
     public class FasterResourceStats : StatPart
     {
         public override void TransformValue(StatRequest req, ref float val)
         {
-            // Only apply adjustments to player-owned pawns
-            if (req.Thing is Pawn pawn && pawn.Faction?.IsPlayer == true)
-            {
-                var settings = LoadedModManager.GetMod<FasterResourceMod>().mod_settings;
+            var settings = LoadedModManager.GetMod<FasterResourceMod>().mod_settings;
+            if (settings == null) return;
 
-                if (parentStat == StatDefOf.MiningYield) val *= settings.mining_yield;
-                if (parentStat == StatDefOf.MiningSpeed) val *= settings.mining_speed;
-                if (parentStat == StatDefOf.PlantHarvestYield) val *= settings.plant_yield;
-                if (parentStat == StatDefOf.PlantWorkSpeed) val *= settings.plant_speed;
-                if (parentStat == StatDefOf.DeepDrillingSpeed) val *= settings.drill_speed;
-            }
+            if (parentStat == StatDefOf.MiningYield) val *= settings.mining_yield;
+            else if (parentStat == StatDefOf.MiningSpeed) val *= settings.mining_speed;
+            else if (parentStat == StatDefOf.PlantHarvestYield) val *= settings.plant_yield;
+            else if (parentStat.defName == "PlantWorkSpeed") val *= settings.plant_speed;
+            else if (parentStat == StatDefOf.DeepDrillingSpeed) val *= settings.drill_speed;
         }
 
-        public override string ExplanationPart(StatRequest req)
-        {
-            if (req.Thing is Pawn pawn && pawn.Faction?.IsPlayer == true)
-                return "[FRA] Player Multiplier Active";
-            
-            return null;
-        }
+        public override string? ExplanationPart(StatRequest req) => "[FRA] Global Multiplier Active";
     }
     #endregion
 }
