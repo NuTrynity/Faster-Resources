@@ -59,7 +59,7 @@
       </ingredients>
 
       <jobString>Chisel chunks</jobString>
-      <workAmount>5000</workAmount>
+      <workAmount>1000</workAmount>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <effectWorking>CutStone</effectWorking>
       <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
@@ -74,7 +74,7 @@
         </categories>
       </fixedIngredientFilter>
       <products>
-        <Steel>75</Steel>
+        <Steel>150</Steel>
       </products>
       <workSkill>Crafting</workSkill>
     </RecipeDef>

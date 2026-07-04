@@ -5,7 +5,14 @@
         <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/prerequisites</xpath>
     </Operation>
 
-        <Operation Class="PatchOperationReplace">
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="DeepDrilling"]/baseCost</xpath>
+        <value>
+            <baseCost>500</baseCost>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="LongRangeMineralScanner"]/baseCost</xpath>
         <value>
             <baseCost>500</baseCost>
@@ -22,7 +29,7 @@
         </value>
     </Operation>
 
-        <Operation Class="PatchOperationReplace">
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="GroundPenetratingScanner"]/baseCost</xpath>
         <value>
             <baseCost>750</baseCost>
