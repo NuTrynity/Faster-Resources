@@ -2,12 +2,8 @@
 <Defs>
     <ThingDef ParentName="BuildingBase">
         <defName>AutoSteelMiner</defName>
-        <label>auto steel miner</label>
-        <description>
-            An automated deep drill that power to
-            independently extract refined steel. 
-            Does not require manual operation.
-        </description>
+        <label>automated steel miner</label>
+        <description>An automated deep drill that power to independently extract refined steel. Does not require manual operation.</description>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <texPath>Things/Building/Production/DeepDrill</texPath>
