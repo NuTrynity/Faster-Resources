@@ -5,11 +5,12 @@
     <label>Component Table</label>
     <description>An early-industrial bench for production of industrial components.</description>
     <thingClass>Building_WorkTable</thingClass>
-    
+
     <graphicData>
       <texPath>componentbench</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3, 1.2)</drawSize> <damageData>
+      <drawSize>(3, 1.2)</drawSize>
+      <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
         <cornerBL>Damage/Corner</cornerBL>
@@ -39,7 +40,8 @@
       <Flammability>1.0</Flammability>
     </statBases>
 
-    <size>(3, 1)</size> <designationCategory>Production</designationCategory>
+    <size>(3, 1)</size>
+    <designationCategory>Production</designationCategory>
     <uiOrder>2520</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -61,7 +63,7 @@
           <li>ToolCabinet</li>
         </linkableFacilities>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Breakdownable" />
     </comps>
 
     <building>
@@ -77,6 +79,6 @@
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
 
-    <rotatable>true</rotatable> 
+    <rotatable>true</rotatable>
   </ThingDef>
 </Defs>
