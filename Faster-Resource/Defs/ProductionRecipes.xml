@@ -74,7 +74,7 @@
         </categories>
       </fixedIngredientFilter>
       <products>
-        <Steel>150</Steel>
+        <Steel>40</Steel>
       </products>
       <workSkill>Crafting</workSkill>
     </RecipeDef>

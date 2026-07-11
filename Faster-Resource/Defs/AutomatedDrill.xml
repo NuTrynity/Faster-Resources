@@ -57,7 +57,7 @@
             </li>
             <li Class="CompProperties_Spawner">
                 <thingToSpawn>Steel</thingToSpawn>
-                <spawnCount>24</spawnCount>
+                <spawnCount>100</spawnCount>
                 <spawnIntervalRange>2500~5000</spawnIntervalRange>
                 <spawnMaxAdjacent>500</spawnMaxAdjacent>
                 <requiresPower>true</requiresPower>
