@@ -25,6 +25,7 @@
     </costList>
     <recipes>
       <li>Make_ComponentIndustrial</li>
+      <li>Make_BulkComponents</li>
     </recipes>
     <researchPrerequisites>
       <li>Smithing</li>
