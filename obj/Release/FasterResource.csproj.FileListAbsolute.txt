@@ -1,0 +1,10 @@
+/home/nutrynity/Documents/GitHub/Faster-Resources/Faster-Resource/Assemblies/FasterResource.dll
+/home/nutrynity/Documents/GitHub/Faster-Resources/Faster-Resource/Assemblies/FasterResource.pdb
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.csproj.AssemblyReference.cache
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.GeneratedMSBuildEditorConfig.editorconfig
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.AssemblyInfoInputs.cache
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.AssemblyInfo.cs
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.csproj.CoreCompileInputs.cache
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.sourcelink.json
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.dll
+/home/nutrynity/Documents/GitHub/Faster-Resources/obj/Release/FasterResource.pdb

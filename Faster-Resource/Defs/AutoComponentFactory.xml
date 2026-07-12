@@ -32,7 +32,7 @@
             <ComponentIndustrial>12</ComponentIndustrial>
         </costList>
         <researchPrerequisites>
-            <li>Machining</li>
+            <li>MicroelectronicsBasics</li>
         </researchPrerequisites>
 
         <comps>
