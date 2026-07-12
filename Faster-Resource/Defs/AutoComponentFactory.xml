@@ -3,19 +3,21 @@
     <ThingDef ParentName="BuildingBase">
         <defName>AutoComponentFactory</defName>
         <label>component assembly plant</label>
-        <description>An industrial automation facility that produces Components, needs to be fueled with Steel</description>
+        <description>An industrial automation facility that produces Components, needs to be fueled
+            with Steel</description>
         <graphicData>
+            <texPath>Things/Building/Power/ChemfuelPoweredGenerator</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Building/Production/DeepDrill</texPath>
             <drawSize>(2,2)</drawSize>
-            <drawRotated>false</drawRotated>
+            <shadowData>
+                <volume>(1.93,1,1.69)</volume>
+                <offset>(-0.03,0,-0.1)</offset>
+            </shadowData>
         </graphicData>
-        <size>(1,1)</size>
+        <size>(2,2)</size>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <pathCost>50</pathCost>
-        <hasInteractionCell>true</hasInteractionCell>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
         <designationCategory>Production</designationCategory>
 
         <tickerType>Normal</tickerType>
@@ -26,9 +28,13 @@
             <Flammability>0.5</Flammability>
         </statBases>
         <costList>
-            <Steel>250</Steel>
+            <Steel>300</Steel>
             <ComponentIndustrial>12</ComponentIndustrial>
         </costList>
+        <researchPrerequisites>
+            <li>Machining</li>
+        </researchPrerequisites>
+
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
@@ -36,25 +42,25 @@
             </li>
             <li Class="CompProperties_Flickable" />
             <li Class="CompProperties_Refuelable">
-                <fuelCapacity>100.0</fuelCapacity>
+                <fuelCapacity>120.0</fuelCapacity>
                 <fuelFilter>
                     <thingDefs>
                         <li>Steel</li>
                     </thingDefs>
                 </fuelFilter>
                 <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+                <consumeFuelOnlyWhenPowered>true</consumeFuelOnlyWhenPowered>
                 <fuelLabel>Stored Steel</fuelLabel>
                 <fuelGizmoLabel>Steel contents</fuelGizmoLabel>
-                <fuelConsumptionRate>4.5</fuelConsumptionRate>
+                <fuelConsumptionRate>120.0</fuelConsumptionRate>
             </li>
 
             <li Class="FasterResource.FueledFactoryCompProperties">
                 <thingToSpawn>ComponentIndustrial</thingToSpawn>
-                <spawnCount>4</spawnCount>
-                <spawnIntervalRange>2500</spawnIntervalRange>
+                <spawnCount>10</spawnCount>
+                <spawnIntervalRange>25000</spawnIntervalRange>
                 <requiresPower>true</requiresPower>
                 <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
-                <fuelConsumptionPerSpawn>30</fuelConsumptionPerSpawn>
             </li>
         </comps>
     </ThingDef>

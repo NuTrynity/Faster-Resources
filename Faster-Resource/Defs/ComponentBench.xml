@@ -28,7 +28,7 @@
       <li>Make_BulkComponents</li>
     </recipes>
     <researchPrerequisites>
-      <li>Smithing</li>
+      <li>Machining</li>
     </researchPrerequisites>
 
     <altitudeLayer>Building</altitudeLayer>

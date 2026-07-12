@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BuildingBase">
-        <defName>AutoSteelMiner</defName>
-        <label>automated steel miner</label>
+        <defName>ElectricSteelMiner</defName>
+        <label>electric steel miner</label>
         <description>An automated deep drill that power to independently extract refined steel. Does not require manual operation.</description>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
@@ -35,8 +35,7 @@
         </thingCategories>
         <costList>
             <Steel>200</Steel>
-            <ComponentIndustrial>5</ComponentIndustrial>
-            <ComponentSpacer>1</ComponentSpacer>
+            <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
         <researchPrerequisites>
             <li>DeepDrilling</li>
@@ -53,13 +52,12 @@
             <li Class="CompProperties_Flickable" />
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>600</basePowerConsumption>
+                <basePowerConsumption>300</basePowerConsumption>
             </li>
             <li Class="CompProperties_Spawner">
                 <thingToSpawn>Steel</thingToSpawn>
                 <spawnCount>100</spawnCount>
-                <spawnIntervalRange>2500~5000</spawnIntervalRange>
-                <spawnMaxAdjacent>500</spawnMaxAdjacent>
+                <spawnIntervalRange>15000</spawnIntervalRange>
                 <requiresPower>true</requiresPower>
                 <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
             </li>
