@@ -13,7 +13,7 @@ namespace FasterResource
     public class FueledFactoryComp : CompSpawner
     {
         private CompRefuelable? fuelComp;
-        public FueledFactoryComp Props => Props;
+        public new FueledFactoryCompProperties Props => (FueledFactoryCompProperties)props;
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
