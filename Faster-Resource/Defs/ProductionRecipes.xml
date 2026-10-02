@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <RecipeDef>
-    <defName>Make_BulkComponents</defName>
+    <defName>CompBench_Make_BulkComponents</defName>
     <label>Create 4x components</label>
     <description>Produce component</description>
     <jobString>Making component.</jobString>
@@ -10,9 +10,6 @@
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>12000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-    <researchPrerequisite>
-      <li>Fabrication</li>
-    </researchPrerequisite>
 
     <recipeUsers>
       <li>FabricationBench</li>

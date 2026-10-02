@@ -2,7 +2,7 @@
 <Defs>
     <WorkGiverDef>
         <defName>DoBillsComponentBench</defName>
-        <label>make components at component crafter</label>
+        <label>make components at component bench</label>
         <giverClass>WorkGiver_DoBill</giverClass>
         <workType>Crafting</workType>
         <priorityInType>70</priorityInType>

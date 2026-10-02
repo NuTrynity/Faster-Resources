@@ -24,7 +24,7 @@
       <Steel>300</Steel>
     </costList>
     <recipes>
-      <li>Make_ComponentIndustrial</li>
+      <li>CompBench_Make_BulkComponents</li>
       <li>Make_BulkComponents</li>
     </recipes>
     <researchPrerequisites>
@@ -36,7 +36,7 @@
     <useHitPoints>True</useHitPoints>
 
     <statBases>
-      <WorkToBuild>3000</WorkToBuild>
+      <WorkToBuild>2400</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
