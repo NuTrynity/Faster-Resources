@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BenchBase">
     <defName>ComponentBench</defName>
-    <label>Component Table</label>
+    <label>Component table</label>
     <description>An early-industrial bench for production of industrial components.</description>
     <thingClass>Building_WorkTable</thingClass>
 
@@ -23,10 +23,6 @@
     <costList>
       <Steel>300</Steel>
     </costList>
-    <recipes>
-      <li>CompBench_Make_BulkComponents</li>
-      <li>Make_BulkComponents</li>
-    </recipes>
     <researchPrerequisites>
       <li>Machining</li>
     </researchPrerequisites>
