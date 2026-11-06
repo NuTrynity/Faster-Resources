@@ -5,7 +5,7 @@ set -e
 
 # --- Configuration ---
 MOD_NAME="Faster-Resource"
-MODS_DIR="/mnt/240GB_SSD/SteamLibrary/steamapps/common/RimWorld/Mods"
+MODS_DIR="/media/nutrynity/240GB_SSD/SteamLibrary/steamapps/common/RimWorld/Mods/"
 TARGET_DIR="$MODS_DIR/$MOD_NAME"
 
 echo "Building Mod Assemblies..."
